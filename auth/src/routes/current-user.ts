@@ -1,8 +1,8 @@
 import express from 'express'
 
-import {currentUser} from '../middlewares/current-user'
+import {currentUser} from '@snjtickets/common'
 
-const router = express.Router()
+const router = express.Router() 
 
 router.get('/api/users/currentUser',currentUser,(req,res)=>{
 res.send({currentUser:req.currentUser||null})

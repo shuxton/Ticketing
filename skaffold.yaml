@@ -18,3 +18,19 @@ build:
      manual:
       - src: 'src/**/*.ts'
         dest: .
+  - image: us.gcr.io/still-bank-301306/client
+    context: client
+    docker:
+     dockerfile: Dockerfile
+    sync:
+     manual:
+      - src: '**/*.js'
+        dest: .
+  - image: us.gcr.io/still-bank-301306/tickets
+    context: tickets
+    docker:
+     dockerfile: Dockerfile
+    sync:
+     manual:
+      - src: 'src/**/*.ts'
+        dest: .
