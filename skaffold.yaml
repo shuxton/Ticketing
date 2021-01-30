@@ -34,3 +34,27 @@ build:
      manual:
       - src: 'src/**/*.ts'
         dest: .
+  - image: us.gcr.io/still-bank-301306/orders
+    context: orders
+    docker:
+     dockerfile: Dockerfile
+    sync:
+     manual:
+      - src: 'src/**/*.ts'
+        dest: .
+  - image: us.gcr.io/still-bank-301306/expiration
+    context: expiration
+    docker:
+     dockerfile: Dockerfile
+    sync:
+     manual:
+      - src: 'src/**/*.ts'
+        dest: .
+  - image: us.gcr.io/still-bank-301306/payments
+    context: payments
+    docker:
+     dockerfile: Dockerfile
+    sync:
+     manual:
+      - src: 'src/**/*.ts'
+        dest: .
